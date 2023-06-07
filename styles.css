@@ -1,0 +1,65 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+:root {
+  --bg-light: white;
+  --fg-light: black;
+  --red: red;
+  --green: green;
+  --blue: #9090ff;
+  --gray: gray;
+  --dark-gold: #bfa100;
+  --brown: #4a2d30;
+  --odd-row: #f0f0f0;
+  --bg-dark: #101010;
+  --fg-dark: white;
+
+
+  /* Default mode */
+  --text-color: var(--fg-light);
+  --bg-color: var(--bg-light);
+  --switcher-color: var(--blue);
+}
+
+/* Switched mode */
+.theme-switch:checked ~ #page {
+  --text-color: var(--fg-dark);
+  --bg-color: var(--bg-dark);
+}
+
+.theme-switch {
+  display: none;
+}
+
+#switch-label {
+  color: var(--switcher-color);
+}
+
+#page {
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100%;
+}
+
+#content{
+  margin: auto;
+  white-space: pre;
+  font-family: monospace, monospace;
+  font-size:  3.69vw;
+  width: 45ch;
+}
+
+.text-gray { color: var(--gray); }
+.font-bold { font-weight: bold; }
+.callout {color: var(--dark-gold); font-weight: bold;}
+
+@media (min-width: 1000px) {
+    #content {
+        font-size: 16px;
+    }
+}
+
